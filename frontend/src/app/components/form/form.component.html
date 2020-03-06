@@ -14,7 +14,7 @@
       
           <div class="form-group col">
             <label for="cuit">CUIT</label>
-            <input type="text" class="form-control form-control-sm" id="cuit" required duplicated
+            <input type="number" class="form-control form-control-sm" id="cuit" required duplicated
                    [(ngModel)]="item.cuit" name="cuit" #cuit="ngModel"
                    [ngModelOptions]="{ updateOn: 'blur' }"
                    [disabled]="id != 'NEW'">
@@ -46,7 +46,7 @@
           
             <div class="form-group col">
               <label for="phone">Teléfono</label>
-              <input type="tel" class="form-control form-control-sm" id="phone" required
+              <input type="number" class="form-control form-control-sm" id="phone" required
                     [(ngModel)]="item.phone" name="phone" #phone="ngModel">
               <div [hidden]="phone.valid || phone.pristine" class="alert alert-danger">
                 Este campo es requerido
