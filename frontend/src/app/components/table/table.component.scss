@@ -1,0 +1,14 @@
+
+.table{
+
+    a{
+        &:hover{
+            cursor: pointer;
+            color:orange;
+        }
+    }
+}
+
+.icon{
+    font-size: .7rem;
+}

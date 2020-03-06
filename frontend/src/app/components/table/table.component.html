@@ -1,0 +1,42 @@
+<section class="p-5">
+  <header class="d-flex justify-content-between p-2">
+    <div class="input-group w-50">
+      <input type="text" #searchInput class="form-control form-control-sm" (input)="filterChange(searchInput)"
+       aria-label="search" placeholder="Buscar...">
+      <div class="input-group-append">
+        <span class="input-group-text">
+          <fa-icon class="icon" [icon]="searchIcon"></fa-icon>
+        </span>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-info btn-sm" (click)="onCreate()">
+      <fa-icon class="icon" [icon]="plusIcon"></fa-icon>
+    </button>
+  </header>
+  <div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">CUIT</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of filteredList; let i = index">
+            <th scope="row">{{ i }}</th>
+            <td>
+              <a class="text-info" (click)="onOpen(item)">  {{item.name}} </a>
+            </td>
+            <td>{{item.cuit}}</td>
+            <td width="60"><button type="button" class="btn btn-link btn-sm text-danger" (click)="onDelete(item)">
+              <fa-icon class="icon" [icon]="timesIcon"></fa-icon>
+            </button></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+</section>

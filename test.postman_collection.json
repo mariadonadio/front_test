@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "1f0d56bb-5463-473a-b308-0cc2c2e2edec",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Proveedor1\",\n    \"cuit\":2036458,\n    \"email\":\"prueba@yahoo.com.ar\",\n    \"address\":\"direccion 7845\",\n    \"phone\":444555,\n    \"ri\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9020/provider",
+					"host": [
+						"localhost"
+					],
+					"port": "9020",
+					"path": [
+						"provider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9020/provider",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9020/provider",
+					"host": [
+						"localhost"
+					],
+					"port": "9020",
+					"path": [
+						"provider"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9020/provider/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9020/provider/5e5e60af1f71141f38040aa3",
+					"host": [
+						"localhost"
+					],
+					"port": "9020",
+					"path": [
+						"provider",
+						"5e5e60af1f71141f38040aa3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT localhost:9020/provider/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Proveedor1\",\r\n        \"cuit\": 2036458,\r\n        \"email\": \"cambiomail@yahoo.com.ar\",\r\n        \"address\": \"direccion 7845\",\r\n        \"phone\": 444555,\r\n        \"ri\": true,\r\n        \"_id\": \"5e5e60af1f71141f38040aa3\",\r\n        \"__v\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9020/provider/5e5e60af1f71141f38040aa3",
+					"host": [
+						"localhost"
+					],
+					"port": "9020",
+					"path": [
+						"provider",
+						"5e5e60af1f71141f38040aa3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete  localhost:9020/provider/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9020/provider/5e5e60af1f71141f38040aa3",
+					"host": [
+						"localhost"
+					],
+					"port": "9020",
+					"path": [
+						"provider",
+						"5e5e60af1f71141f38040aa3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

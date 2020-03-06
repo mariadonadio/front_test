@@ -1,0 +1,87 @@
+<nav class="navbar navbar-dark bg-info flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">FrontEnd Test</a>
+    
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">
+            <fa-icon class="icon" [icon]="userAltIcon"></fa-icon>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky mt-4">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+                <button class="btn btn-link text-dark" [routerLink]="['/']">
+                    <div class="icon-container">
+                        <fa-icon class="icon" [icon]="homeIcon"></fa-icon>
+                    </div>
+                    <span>
+                        Proveedores
+                    </span> 
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-link" disabled>
+                    <div class="icon-container">
+                        <fa-icon class="icon" [icon]="fileIcon"></fa-icon>
+                    </div>
+                    <span>
+                        Ordenes
+                    </span>
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-link" disabled>
+                    <div class="icon-container">
+                        <fa-icon class="icon" [icon]="cartIcon"></fa-icon>
+                    </div>
+                    <span>
+                        Productos
+                    </span>
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-link" disabled>
+                    <div class="icon-container">
+                        <fa-icon class="icon" [icon]="userIcon"></fa-icon>
+                    </div>
+                    <span>
+                        clientes
+                    </span>
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-link" disabled>
+                    <div class="icon-container">
+                        <fa-icon class="icon" [icon]="chartIcon"></fa-icon>
+                    </div>
+                    <span>
+                        Reportes
+                    </span>
+                </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-link" disabled>
+                  <div class="icon-container">
+                      <fa-icon class="icon" [icon]="layersIcon"></fa-icon>
+                  </div>
+                  <span>
+                      Integraciones
+                  </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="col content">
+          <router-outlet></router-outlet>
+      </div>
+
+    </div>
+</div>
